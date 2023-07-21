@@ -12,3 +12,8 @@ const images = [
     alt: 'Group of Horses Running',
   },
 ];
+
+const galleryList = document.querySelector(".gallery");
+galleryList.classList.add("task-styles");
+const galleryMarkup = images.map(image => `<li><img src="${image.url}" alt="${image.alt}" height="300px"></li>`).join(""); 
+galleryList.insertAdjacentHTML("afterbegin", galleryMarkup);
